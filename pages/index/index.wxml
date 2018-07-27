@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="b-container">
+  <view class='block' bindtap='onReview' data-year='2016'>
+    <text>2016</text>
+  </view>
+  <view class='block' bindtap='onReview' data-year='2017'>
+    <text>2017</text>
+  </view>
+</view>

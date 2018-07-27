@@ -1,0 +1,16 @@
+<!--pages/review/review.wxml-->
+<view wx:for="{{reviews}}" wx:key="{{item.id}}" class='v-container'  style="background-image:url('{{item.payload.mobile_background_img}}');" >
+  <view wx:if="{{item.kind == 1}}" class="img-block">
+    <view></view>
+    <swiper style="height:120px;" display-multiple-items='4'>
+        <block wx:for="{{item.subjects}}"  wx:for-item="sub" wx:key="{{sub.id}}">
+          <swiper-item style="width:80px;height:120px">
+            <image src="{{sub.cover}}" style='width: 80px; height: 120px;' mode='scaleToFill' />
+          </swiper-item>
+        </block>
+    </swiper>
+  </view>
+  <view wx:else class="txt-block">
+    <text>{{item.payload.text}}</text>
+  </view>
+</view>
